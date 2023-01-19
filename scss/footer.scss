@@ -1,0 +1,88 @@
+.footer{
+    min-height: 130px;
+    height: 100%;
+    &__content{
+        margin: 0 auto;
+        max-width: 1440px;
+        padding: 0 109px;
+        width: 100%;
+        min-height: 130px;
+        display: flex;
+        align-items: center;    
+    }
+    &__flex{
+        width: 100%;
+        min-height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;    
+    }
+    &__flexgithub{
+        &item, &itemlink{
+            margin-left: 15px;
+            font-weight: 400;
+            font-size: 20px;
+            color: $links-nav;
+            text-decoration: none;
+            &:first-child{
+                margin-left: 0;    
+            }       
+        }           
+    }
+    &__scopes{
+        a{
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: $links-nav;    
+        text-decoration: none;
+        margin-left: 15px;
+        } 
+    }
+    &__sosial{
+        width: 188px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;      
+    }   
+}
+@media (max-width: 992px) {
+   .footer{
+        &__content{
+            align-items: flex-start;
+        }
+        &__flex{
+            flex-direction: column;
+            margin-top: 33px;    
+            padding-bottom: 18px;   
+        }
+        &__scopes{
+            margin-top: 16px;    
+        }
+        &__scopes{
+            a{
+                margin-left: 0;    
+            }  
+        }
+        &__sosial{
+            margin-top: 25px;    
+        }
+    } 
+}
+@media (max-width: 450px) {
+    .footer{
+        &__content{
+            padding: 0;  
+        }
+        &__flex{
+            margin-top: 25px;
+            padding-bottom: 7px;    
+        }
+        &__sosial{
+            margin-top: 13px;    
+        }    
+    }
+}

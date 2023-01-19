@@ -1,0 +1,130 @@
+.header{
+    height: 134px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 109px;
+    background-color: $main-bg;
+    &__burger{
+        display: none;
+    }
+    &__nav{
+        display: flex;
+        max-width: 1220px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        margin-top: -3px;    
+    }
+    &__ul{
+        display: flex;
+        max-width: 452px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;    
+    }
+    &__a{
+        text-decoration: none;
+        font-family: 'Inika';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: $links-nav;
+        transition: .2s all;
+        &:hover{
+            color: $orange;
+            font-weight: 700;    
+        }
+        &-active{
+             color: $orange;
+             font-weight: 700;         
+        }    
+    }
+}
+@media (max-width: 992px) {
+    .header{
+        padding: 0 50px;
+        height: 117px;    
+    }
+}
+@media (max-width: 700px) {
+    .header{
+        padding: 0 25px;
+        height: 96px;
+        &__ul{
+            width: 70%;    
+        }
+        &__a{
+            font-size: 14px;    
+        }     
+    }
+}
+@media (max-width: 450px) {
+    .header{
+        &__burger{
+            display: block;
+            &segments{
+                display: block;
+                height: 24px;
+                width: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer; 
+                span{
+                    display: block;
+                    width: 40px;
+                    height: 2px;
+                    background: $wgray;
+                    transition: 0.2s;        
+                }
+                &-active{
+                    justify-content: center;
+                    position: fixed;
+                    top: 35px;
+                    right: 28px;
+                    span{
+                        display: none;
+                        &:first-child{
+                            display: block;
+                            position: absolute;
+                            transform: rotate(-45deg);
+                        }
+                        &:last-child{
+                           display: block;
+                           position: absolute;
+                           transform: rotate(45deg);     
+                        }   
+                    }    
+                }   
+            }    
+        }
+        &__ul{
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+            background: $wgray;
+            width: 200px;
+            position: fixed;
+            top: 0;
+            z-index: 9;
+            left: -100%;
+            transition: 0.4s all;
+            &-active{
+                left: 0;    
+            }
+        }
+        &__li{
+            margin: 10px 0;
+            width: 90%;
+            text-align: center;
+            a{
+               display: block;
+               padding: 5px 0;
+            }   
+        }
+    }  
+}

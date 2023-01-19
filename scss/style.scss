@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;  
+}
+html{
+    scroll-behavior: smooth;    
+}
+
+$main-bg: #EDF2EC;
+$links-nav: #010201;
+$green: #499A18;
+$orange: #E06733;
+$wgray: #717171;
+$bgray: #636060;
+
+.wrapper{
+    margin: 0 auto;
+}
+.filter{
+    filter: blur(2px);    
+}
+.none{
+    display: none;    
+}
+    
+@import "header.scss";
+@import "main.scss";
+@import "footer.scss";
